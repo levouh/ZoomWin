@@ -326,11 +326,6 @@ fun! s:SavePosn(savewinhoriz)
    	let settings= settings." nobl"
 	setl bl
    endif
-   if &bt != ""
-"	call Decho("special handling: changing buf#".bufnr("%")."'s bt=".&bt.' to ""')
-   	let settings= settings." bt=".&bt
-	setl bt=
-   endif
    if settings != ""
    	let savedposn= savedposn.":setl ".settings."\<cr>"
    endif
